@@ -26,7 +26,7 @@ const HeaderBackground = Styled.div`
    left: 0;
    width: 100%; 
    z-index: 1000;
-    `;
+  `;
 
 function a11yProps(index: number) {
   return {
@@ -51,32 +51,42 @@ export default function Gallery() {
     <React.Fragment>
       <Navbar title={data[0].pageName.toUpperCase()} />
       <HeaderBackground />
-      <Box sx={{ paddingTop: '120px' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={value} onChange={handleChange}>
-            <Tab
-              label='VIDEOS'
-              {...a11yProps(0)}
-              sx={{
-                width: '50%',
-                fontSize: '1.5rem',
-                maxWidth: 'none',
-                fontWeight: '900',
-              }}
-            />
-            <Tab
-              label='PHOTOS'
-              {...a11yProps(1)}
-              sx={{
-                width: '50%',
-                fontSize: '1.5rem',
-                maxWidth: 'none',
-                fontWeight: '900',
-              }}
-            />
-          </Tabs>
-        </Box>
+      <Box
+        sx={{
+          borderBottom: 1,
+          borderColor: 'divider',
+          marginTop: '112px',
+          position: 'fixed',
+          backgroundColor: 'white',
+          zIndex: '1100',
+          width: '100%',
+        }}
+      >
+        <Tabs value={value} onChange={handleChange}>
+          <Tab
+            label='VIDEOS'
+            {...a11yProps(0)}
+            sx={{
+              width: '50%',
+              fontSize: '1.5rem',
+              maxWidth: 'none',
+              fontWeight: '900',
+            }}
+          />
+          <Tab
+            label='PHOTOS'
+            {...a11yProps(1)}
+            sx={{
+              width: '50%',
+              fontSize: '1.5rem',
+              maxWidth: 'none',
+              fontWeight: '900',
+            }}
+          />
+        </Tabs>
+      </Box>
 
+      <Box sx={{ paddingTop: '140px' }}>
         <TabPanel value={value} index={0}>
           <Box>
             <Grid
