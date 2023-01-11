@@ -38,7 +38,10 @@ function a11yProps(index: number) {
 export default function Gallery() {
   const [value, setValue] = React.useState(0);
 
-  const { data, error } = useSWR('http://localhost:8000/data', fetcher);
+  const { data, error } = useSWR(
+    'https://orange-digital-coding-challenge-8xro.vercel.app/data',
+    fetcher
+  );
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;

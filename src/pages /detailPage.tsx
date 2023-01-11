@@ -40,7 +40,10 @@ const FlexBox = Styled.div`
 export const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function DetailPage() {
-  const { data, error } = useSWR('http://localhost:8000/data', fetcher);
+  const { data, error } = useSWR(
+    'https://orange-digital-coding-challenge-8xro.vercel.app/data',
+    fetcher
+  );
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
