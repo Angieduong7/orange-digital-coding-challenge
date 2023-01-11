@@ -4,6 +4,7 @@
 
 - Gallery to display photos and videos
 - Detail page to display users' comments and details
+- Link to project, deployed on Vercel: https://orange-digital-coding-challenge.vercel.app/
 
 <img width="1428" alt="Screen Shot 2023-01-11 at 6 19 59 pm" src="https://user-images.githubusercontent.com/89195761/211793456-4d0dd0c4-9f14-48ad-8322-386df1f3e548.png">
 <img width="1440" alt="Screen Shot 2023-01-11 at 6 20 55 pm" src="https://user-images.githubusercontent.com/89195761/211793640-807bef11-b690-4daa-984d-bdda626e0b1c.png">
@@ -16,10 +17,10 @@ In your terminal after you clone your project down, remember to run either `yarn
 
 ### Start up the project
 
-- Run `npm run startServer` or `yarn run startServer` to start up the server at port 8000 first
-- Run `npm start` or `yarn start` to run the client side
+- Run `npm start` or `yarn start` to run the client side locally, all the data should be populated from the live server.
 
 ### Notes:
 
-- All the data in the client side would be populated from the server with JSON format
+- All the data in the client side would be populated from the live server with JSON format so we don't need to run the server locally
+- Run `npm run startServer` or `yarn run startServer` to start up the server at port 8000 locally
 - All the data is contained in the `data.ts` file
